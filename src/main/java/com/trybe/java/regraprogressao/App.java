@@ -27,7 +27,7 @@ public class App {
       activitiesWeights[i] = scanner.nextInt();
       scanner.nextLine();
 
-      System.out.println("Digite a nota da atividade " + (i + 1) + ":");
+      System.out.println("Digite a nota obtida para " + activitiesNames[i] + ":");
       activitiesGrades[i] = scanner.nextInt();
     }
     scanner.close();
