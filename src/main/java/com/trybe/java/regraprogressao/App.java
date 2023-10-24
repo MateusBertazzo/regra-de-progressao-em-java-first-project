@@ -33,6 +33,7 @@ public class App {
 
       System.out.println("Digite a nota obtida para " + activitiesNames[i] + ":");
       activitiesGrades[i] = scanner.nextInt();
+
       scanner.nextLine();
     }
     scanner.close();
@@ -43,6 +44,7 @@ public class App {
 
     if (totalWeight != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
+      return;
     }
 
     for (int i = 0; i < activityQuantity; i++) {
@@ -56,7 +58,7 @@ public class App {
       System.out.println(
           "Lamentamos informar que, com base na sua pontuação alcançada neste período," 
             + totalWeightGrade 
-                + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
+              + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
     }
   }
 }
