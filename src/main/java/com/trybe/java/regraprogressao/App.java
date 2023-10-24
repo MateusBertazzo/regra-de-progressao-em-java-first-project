@@ -19,12 +19,15 @@ public class App {
     int[] activitiesWeights = new int[activityQuantity];
     int[] activitiesGrades = new int[activityQuantity];
 
+    int totalWeight = 0;
+
     for (int i = 0; i < activityQuantity; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
       activitiesNames[i] = scanner.nextLine();
 
       System.out.println("Digite o peso da atividade " + (i + 1) + ":");
       activitiesWeights[i] = scanner.nextInt();
+
       scanner.nextLine();
 
       System.out.println("Digite a nota obtida para " + activitiesNames[i] + ":");
@@ -32,5 +35,13 @@ public class App {
       scanner.nextLine();
     }
     scanner.close();
+
+    for (int weight : activitiesWeights) {
+      totalWeight += weight;
+    }
+
+    if (totalWeight != 100) {
+      System.out.println("A soma dos pesos é diferente de 100!");
+    }
   }
 }
