@@ -20,6 +20,7 @@ public class App {
     int[] activitiesGrades = new int[activityQuantity];
 
     int totalWeight = 0;
+    double totalWeightGrade = 0.0;
 
     for (int i = 0; i < activityQuantity; i++) {
       System.out.println("Digite o nome da atividade " + (i + 1) + ":");
@@ -42,6 +43,17 @@ public class App {
 
     if (totalWeight != 100) {
       System.out.println("A soma dos pesos é diferente de 100!");
+    }
+
+    for (int i = 0; i < activityQuantity; i++) {
+      totalWeightGrade += (activitiesWeights[i] * activitiesGrades[i] / 100);
+    }
+
+    if (totalWeightGrade >= 85) {
+      System.out.println("Parabéns! Você alcançou " + totalWeightGrade 
+          + "%! E temos o prazer de informar que você obteve aprovação!");
+    } else {
+      System.out.println("Você não atingiu o percentual mínimo de aprovação. Estude mais!");
     }
   }
 }
