@@ -53,7 +53,10 @@ public class App {
       System.out.println("Parabéns! Você alcançou " + totalWeightGrade 
           + "%! E temos o prazer de informar que você obteve aprovação!");
     } else {
-      System.out.println("Você não atingiu o percentual mínimo de aprovação. Estude mais!");
+      System.out.println(
+          "Lamentamos informar que, com base na sua pontuação alcançada neste período," 
+            + totalWeightGrade 
+                + "%, você não atingiu a pontuação mínima necessária para sua aprovação.");
     }
   }
 }
