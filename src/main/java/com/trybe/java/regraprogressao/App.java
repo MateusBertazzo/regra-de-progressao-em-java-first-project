@@ -29,6 +29,7 @@ public class App {
 
       System.out.println("Digite a nota obtida para " + activitiesNames[i] + ":");
       activitiesGrades[i] = scanner.nextInt();
+      scanner.nextLine();
     }
     scanner.close();
   }
